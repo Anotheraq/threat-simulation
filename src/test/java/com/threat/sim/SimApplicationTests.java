@@ -1,4 +1,4 @@
-package com.diploma.sim;
+package com.threat.sim;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
