@@ -18,7 +18,7 @@ public class InputMismatchExceptionController {
         try{
             scanner.nextInt();
         }catch (InputMismatchException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

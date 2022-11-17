@@ -18,7 +18,7 @@ public class MissingResourceExceptionController {
         try{
             ResourceBundle.getBundle("");
         }catch (MissingResourceException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

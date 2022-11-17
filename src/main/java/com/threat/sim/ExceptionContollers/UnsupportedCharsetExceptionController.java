@@ -18,7 +18,7 @@ public class UnsupportedCharsetExceptionController {
         try{
             Charset.forName("test");
         }catch (UnsupportedCharsetException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

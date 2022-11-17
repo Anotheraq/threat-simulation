@@ -16,7 +16,7 @@ public class ArrayStoreExceptionController {
         try{
             x[0]=1;
         }catch (java.lang.ArrayStoreException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
 

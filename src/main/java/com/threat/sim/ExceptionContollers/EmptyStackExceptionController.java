@@ -18,7 +18,7 @@ public class EmptyStackExceptionController {
         try{
             stack.pop();
         }catch (EmptyStackException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

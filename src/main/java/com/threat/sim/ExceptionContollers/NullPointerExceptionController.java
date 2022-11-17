@@ -16,7 +16,7 @@ public class NullPointerExceptionController {
             String el = null;
             el.substring(1,2);
         }catch (NullPointerException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

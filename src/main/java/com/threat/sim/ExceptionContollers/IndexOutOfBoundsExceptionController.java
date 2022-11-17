@@ -16,7 +16,7 @@ public class IndexOutOfBoundsExceptionController {
         try{
             new ArrayList<Integer>().get(1);
         }catch (IndexOutOfBoundsException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

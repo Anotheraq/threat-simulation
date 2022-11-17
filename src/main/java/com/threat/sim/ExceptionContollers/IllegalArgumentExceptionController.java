@@ -17,7 +17,7 @@ public class IllegalArgumentExceptionController {
         try{
             List<Integer> i = new ArrayList<>(-1);
         }catch (IllegalArgumentException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

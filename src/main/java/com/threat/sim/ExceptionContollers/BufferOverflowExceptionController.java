@@ -18,7 +18,7 @@ public class BufferOverflowExceptionController {
         try{
             bf.putInt(1);
         }catch (java.nio.BufferOverflowException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
         return "exception-errors";

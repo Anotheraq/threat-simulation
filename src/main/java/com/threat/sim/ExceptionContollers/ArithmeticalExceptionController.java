@@ -16,7 +16,7 @@ public class ArithmeticalExceptionController {
         try{
             x = 1/0;
         }catch (ArithmeticException e){
-            model.addAttribute("exception", e);
+            model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }
 
