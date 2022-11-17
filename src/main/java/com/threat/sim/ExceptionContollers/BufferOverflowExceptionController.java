@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.nio.ByteBuffer;
 
 @Controller
-public class BufferOverflowException {
+public class BufferOverflowExceptionController {
 
     @GetMapping(value = "/bo")
     public String render(Model model) {

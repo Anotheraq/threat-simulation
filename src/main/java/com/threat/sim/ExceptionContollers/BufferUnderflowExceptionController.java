@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.nio.ByteBuffer;
 @Controller
-public class BufferUnderflowException {
+public class BufferUnderflowExceptionController {
 
     @GetMapping(value = "/bu")
     public String render(Model model) {
