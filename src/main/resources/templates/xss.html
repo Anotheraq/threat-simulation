@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>XXS</title>
+    <link rel="stylesheet" th:href="@{css/xss.css}">
+</head>
+<body>
+<form action="/xxs" method="POST" class="input-form">
+    <textarea name="input" rows=5 placeholder="input"></textarea>
+    <button class="submit-button" type="submit">SUBMIT</button>
+    <span th:utext="${xss}"></span>
+</form>
+
+</body>
+</html>

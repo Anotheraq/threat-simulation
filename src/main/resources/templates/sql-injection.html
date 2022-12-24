@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>SQLInjection</title>
+    <link rel="stylesheet" th:href="@{css/sqli.css}">
+
+</head>
+<body>
+<header class="inputs">
+    <form action="/sqli" method="POST" class="login-form">
+        <span th:text="${message}"></span>
+        <input name="username" type="text" placeholder="Username">
+        <input name="password" type="text" placeholder="Password">
+        <button type="submit">SUBMIT</button>
+    </form>
+</header>
+<footer>
+    <div class="data">
+        <table class="users-table">
+            <tr>
+                <div class="users-info-template">
+                    <p class="username">Username</p>
+                    <p class="data">Data</p>
+                </div>
+            </tr>
+            <tr th:each="user: ${users}">
+                <div class="user-info">
+                    <p th:text="${user.getUsername()}" class="username"></p>
+                    <p th:text="${user.getData()}" class="data"></p>
+                </div>
+            </tr>
+        </table>
+    </div>
+</footer>
+</body>
+</html>
