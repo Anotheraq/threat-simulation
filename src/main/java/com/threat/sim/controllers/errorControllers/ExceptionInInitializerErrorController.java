@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ExceptionInInitializerErrorController {
 
     static class TestClass{
-        private static int testVar;
-        static{
-            testVar = 2/0;
-        }
+        private static int testVar = 2/0;
     }
     @GetMapping(value = "/eiierr")
     public String render(Model model) {

@@ -1,0 +1,17 @@
+
+.exceptions, .errors, .vulnerabilities{
+    margin: 30px, 0px;
+}
+
+li{
+    margin: 20px 0px;
+}
+a{
+    font-size: 22px;
+}
+img{
+    width: 80px;
+}
+header{
+    display: flex;
+}

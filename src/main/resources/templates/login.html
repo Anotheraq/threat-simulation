@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/login.css}">
+    <title>Login</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="login-container">
+        <form action="/login" method="POST" class="login-form">
+            <span th:text="${message}"></span>
+            <input name="username" type="text" placeholder="Enter your login">
+            <input name="password" type="text" placeholder="Enter your password">
+            <button type="submit">LOGIN</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

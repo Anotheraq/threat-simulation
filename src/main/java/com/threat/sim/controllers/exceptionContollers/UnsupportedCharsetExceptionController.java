@@ -10,8 +10,6 @@ import java.nio.charset.UnsupportedCharsetException;
 
 @Controller
 public class UnsupportedCharsetExceptionController {
-
-
     @GetMapping(value = "/uce")
     public String render(Model model) {
         model.addAttribute("title","Unsupported charset exception");

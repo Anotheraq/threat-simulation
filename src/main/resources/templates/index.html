@@ -1,22 +1,131 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th=”http://www.thymeleaf.org”>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
     <title>Hub</title>
+    <link rel="stylesheet" th:href="@{css/index.css}">
+
 </head>
 <body>
-  <section>
-    <div>
-      <h2 style="margin-left: 20px;">Exceptions: </h2>
+
+    <div class="exceptions">
+      <header style="display:flex;">
+        <img th:src="@{images/exception.png}"/>
+        <h1 style="margin-left: 20px;">Exceptions: </h1>
+      </header>
       <ul>
         <li>
           <a href="/ae">Arithmetic Exception</a>
         </li>
         <li>
-          <a href="/ae">Arithmetic Exception</a>
+          <a href="/aioob">Array index out of bounds exception</a>
+        </li>
+        <li>
+          <a href="/as">Array store exception</a>
+        </li>
+        <li>
+          <a href="/bo">Buffer overflow exception</a>
+        </li>
+        <li>
+          <a href="/bu">Buffer underflow exception</a>
+        </li>
+        <li>
+          <a href="/cce">Class cast exception</a>
+        </li>
+        <li>
+          <a href="/cme">Class cast exception</a>
+        </li>
+        <li>
+          <a href="/ese">Empty stack exception</a>
+        </li>
+        <li>
+          <a href="/iae">Illegal argument exception</a>
+        </li>
+        <li>
+          <a href="/ipse">Illegal path state exception</a>
+        </li>
+        <li>
+          <a href="/ise">Illegal state exception</a>
+        </li>
+        <li>
+          <a href="/ioobe">Index out of bounds exception</a>
+        </li>
+        <li>
+          <a href="/ime">Input mismatch exception</a>
+        </li>
+        <li>
+          <a href="/mre">Missing resource exception</a>
+        </li>
+        <li>
+          <a href="/nase">Negative array size exception</a>
+        </li>
+        <li>
+          <a href="/nsee">No such element exception</a>
+        </li>
+        <li>
+          <a href="/npe">Null pointer exception</a>
+        </li>
+        <li>
+          <a href="/nfe">Number format exception</a>
+        </li>
+        <li>
+          <a href="/uce">Unsupported charset exception</a>
+        </li>
+        <li>
+          <a href="/uoe">Unsupported operation exception</a>
         </li>
       </ul>
     </div>
-  </section>
+    <div class="errors">
+      <header style="display:flex;">
+        <img th:src="@{images/error.png}"/>
+        <h1 style="margin-left: 20px;">Errors: </h1>
+      </header>
+      <ul>
+        <li>
+          <a href="/aerr">Assertion error</a>
+        </li>
+        <li>
+          <a href="/eiierr">Exception in initializer error</a>
+        </li>
+        <li>
+          <a href="/oomerr">Out of memory error</a>
+        </li>
+        <li>
+          <a href="/soerr">Stack overflow error</a>
+        </li>
+        <li>
+          <a href="/ulerr">Unsatisfied link error</a>
+        </li>
+      </ul>
+    </div>
+    <div class="vulnerabilities">
+      <header style="display:flex;">
+        <img th:src="@{images/vulnerabilities.png}"/>
+        <h1 style="margin-left: 20px;">Vulnerabilities: </h1>
+      </header>
+      <ul>
+        <li>
+          <a href="/login">Broken access control</a>
+        </li>
+        <li>
+          <a href="/or">Open redirect</a>
+        </li>
+        <li>
+          <a href="/sqli">SQL Injection</a>
+        </li>
+        <li>
+          <a href="/ssrf/path?url=https://pastebin.com/raw/PTT2TpH4">Server Side Request Forgery</a>
+        </li>
+        <li>
+          <a href="/ssti/frag?param=%24%7B7*7%7D">Server Side Template Injection(PATCHED)</a>
+        </li>
+        <li>
+          <a href="/xss">Cross-Site Scripting</a>
+        </li>
+
+      </ul>
+    </div>
+
 </body>
 </html>

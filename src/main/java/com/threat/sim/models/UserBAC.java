@@ -1,16 +1,16 @@
 package com.threat.sim.models;
 
-public class User {
+public class UserBAC {
     private String username;
     private String password;
-    private String data;
+    private boolean isAdmin;
 
-    public User(String username, String password, String data) {
+    public UserBAC(String username, String password, boolean isAdmin) {
         this.username = username;
         this.password = password;
-        this.data = data;
+        this.isAdmin = isAdmin;
     }
-
+    public UserBAC(){}
     public String getUsername() {
         return username;
     }
@@ -27,11 +27,11 @@ public class User {
         this.password = password;
     }
 
-    public String getData() {
-        return data;
+    public boolean isAdmin() {
+        return isAdmin;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
     }
 }

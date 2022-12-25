@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <title>BACMain</title>
+    <link rel="stylesheet" th:href="@{css/bac-template.css}">
+
+
+</head>
+<body>
+    <header>
+        <div class="user-header">
+            <h2 th:text="${username}" class="username"></h2>
+        </div>
+        <div class="logout-button">
+            <form action="/logout" method="POST" class="logout-form">
+                <button class="logout" type="submit">LOGOUT</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <div class="user-button">
+                <form action="/userpage" method="GET" class="user-form">
+                    <button class="user" type="submit">User page</button>
+                </form>
+            </div>
+            <div class="admin-button">
+                <form action="/adminpage" method="GET" class="admin-form">
+                    <button class="admin" type="submit" th:disabled="${!isadmin}">Admin page</button>
+                </form>
+            </div>
+        </nav>
+        <div class="text">
+            <h1>THIS IS A MAIN PAGE</h1>
+        </div>
+
+    </main>
+
+</body>
+</html>
