@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>XSS</title>
-    <link rel="stylesheet" th:href="@{css/xss.css}">
+    <link rel="stylesheet" th:href="@{/css/xss.css}">
 </head>
-<body>
-<form action="/xxs" method="POST" class="input-form">
+<body style="background: whitesmoke;">
+<form action="/xss" method="POST" class="input-form">
     <textarea name="input" rows=5 placeholder="input"></textarea>
     <button class="submit-button" type="submit">SUBMIT</button>
     <span th:utext="${xss}"></span>
