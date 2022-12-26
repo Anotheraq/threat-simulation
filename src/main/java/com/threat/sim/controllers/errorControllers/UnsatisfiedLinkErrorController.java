@@ -11,13 +11,19 @@ import java.net.SocketException;
 
 @Controller
 public class UnsatisfiedLinkErrorController {
-    private static native NetworkInterface getByName0(String name) throws SocketException;
+
+    static class Test{
+        private static String a = "Anti NoClassDefFoundError string";
+        static {
+            System.loadLibrary("libFile");
+        }
+    }
     @GetMapping(value = "/ulerr")
     public String render(Model model) {
         model.addAttribute("title","Unsatisfied link error");
         try{
-            getByName0(" ");
-        }catch (UnsatisfiedLinkError | SocketException e){
+            new Test();
+        }catch (UnsatisfiedLinkError e){
             model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));
         }

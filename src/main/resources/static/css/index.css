@@ -1,6 +1,8 @@
-
+body{
+    background: whitesmoke;
+}
 .exceptions, .errors, .vulnerabilities{
-    margin: 30px, 0px;
+    margin: 30px 20px;
 }
 
 li{

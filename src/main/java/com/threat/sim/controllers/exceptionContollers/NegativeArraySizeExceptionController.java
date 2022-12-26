@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class NegativeArraySizeExceptionController {
-
     @GetMapping(value = "/nase")
     public String render(Model model) {
         model.addAttribute("title","Negative array size exception");

@@ -5,10 +5,9 @@
     <title th:utext="${title}"></title>
 </head>
 
-<body>
+<body style="background: whitesmoke;">
     <h1 style="border-bottom: 2px solid" th:utext="${title}"></h1>
-    <h3 style="border-bottom: 2px solid" th:utext="'Exception message: ' + ${message}"></h3>
-    <h3 style="border-bottom: 2px solid" th:utext="'Cause: ' + ${cause}"></h3>
+    <h3 style="border-bottom: 2px solid" th:utext="'Message: ' + ${message}"></h3>
     <h3 th:utext="'Stack trace: <br> ' + ${trace} + '</br>'"></h3>
 </body>
 </html>

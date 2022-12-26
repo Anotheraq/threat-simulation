@@ -12,8 +12,8 @@ public class NullPointerExceptionController {
     @GetMapping(value = "/npe")
     public String render(Model model) {
         model.addAttribute("title","Null pointer exception");
+        String el = null;
         try{
-            String el = null;
             el.substring(1,2);
         }catch (NullPointerException e){
             model.addAttribute("message", e);

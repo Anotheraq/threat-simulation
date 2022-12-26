@@ -14,7 +14,7 @@ public class InputMismatchExceptionController {
     @GetMapping(value = "/ime")
     public String render(Model model) {
         model.addAttribute("title","Input mismatch exception");
-        Scanner scanner = new Scanner("string");
+        Scanner scanner = new Scanner("not integer");
         try{
             scanner.nextInt();
         }catch (InputMismatchException e){

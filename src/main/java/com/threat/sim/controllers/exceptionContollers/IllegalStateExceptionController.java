@@ -18,9 +18,7 @@ public class IllegalStateExceptionController {
         List<Integer> numbers = new ArrayList<>(List.of(1,2,3,4));
         Iterator<Integer> it = numbers.iterator();
         try{
-            while(it.hasNext()){
-                it.remove();
-            }
+            it.remove();
         }catch (IllegalStateException e){
             model.addAttribute("message", e);
             model.addAttribute("trace", ExceptionUtils.getStackTrace(e));

@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class NumberFormatExceptionController {
-
-
     @GetMapping(value = "/nfe")
     public String render(Model model) {
         model.addAttribute("title","Number format exception");

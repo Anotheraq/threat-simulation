@@ -10,7 +10,7 @@ public class ArithmeticalExceptionController {
 
     @GetMapping(value = "/ae")
     public String render(Model model) {
-        model.addAttribute("title","Arithmetical exception");
+        model.addAttribute("title","Arithmetic exception");
 
         int x;
         try{

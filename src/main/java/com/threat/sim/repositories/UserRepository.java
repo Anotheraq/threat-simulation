@@ -31,7 +31,6 @@ public class UserRepository {
     }
 
     public UserBAC getBACUser(String username, String password){
-//        return jdbcTemplate.query("SELECT * FROM sqli.users WHERE username = '"+username+"' AND password = '"+password+"';",
         UserBAC userBAC;
         try {
              userBAC = jdbcTemplate.queryForObject("SELECT * FROM bac.users WHERE username = ? AND password = ?;",
